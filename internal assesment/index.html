@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swad-e-Baraf</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #34495e;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff80ab;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .hero-buttons {
+            margin-top: 20px;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-buttons a:first-child {
+            background-color: #ff80ab;
+            border: none;
+        }
+
+        .hero-buttons a:hover {
+            background-color: white;
+            color: #2c3e50;
+        }
+
+        .hero img {
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .products {
+            padding: 50px;
+            background-color: #34495e;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .products p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-item {
+            background-color: #2c3e50;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 250px;
+        }
+
+        .product-item img {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .product-item h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .product-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff80ab;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-item a:hover {
+            background-color: #ff6587;
+        }
+
+        .reviews {
+            padding: 50px;
+            background-color: #2c3e50;
+            text-align: center;
+        }
+
+        .reviews h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .review-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .review-item {
+            background-color: #34495e;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 250px;
+        }
+
+        .review-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .review-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .review-item p {
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .contact {
+            padding: 50px;
+            background-color: #2c3e50;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #ff80ab;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff6587;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Swad-e-Baraf</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#product">Product</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Real ice cream for real ice cream lovers</h1>
+            <p>Sweet ice cream for pleasure seekers.</p>
+            <div class="hero-buttons">
+                <a href="#buy">Buy Online</a>
+                <a href="#store">Find in Store</a>
+            </div>
+        </div>
+        <img src="n7new.jpg" alt="Happy customer enjoying ice cream">
+    </section>
+
+    <section class="products">
+        <h2>We Pride Ourselves On Exceptional Flavors</h2>
+        <p>The nearly -200°C (-328°F) liquid freezes the ingredients—sweet cream, flavoring, and handpicked mix-ins—almost instantaneously, creating tiny ice crystals and a smooth texture.</p>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="t6.avif" alt="Desi Kulfi">
+                <h3>Desi Kulfi</h3>
+                <p>$7</p>
+                <a href="#buy">Buy</a>
+            </div>
+            <div class="product-item">
+                <img src="t4.avif" alt="Cornato">
+                <h3>Cornato</h3>
+                <p>$5</p>
+                <a href="#buy">Buy</a>
+            </div>
+            <div class="product-item">
+                <img src="t5.avif" alt="SLOW Churn">
+                <h3>SLOW Churn</h3>
+                <p>$15</p>
+                <a href="#buy">Buy</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-grid">
+            <div class="review-item">
+                <img src="n2.jpeg" alt="Customer 1">
+                <h3>Aashi</h3>
+                <p>"The best ice cream I've ever tasted!"</p>
+            </div>
+            <div class="review-item">
+                <img src="n3.jpg" alt="Customer 2">
+                <h3>Kanika</h3>
+                <p>"Absolutely love the flavors and smooth texture."</p>
+            </div>
+            <div class="review-item">
+                <img src="n4.avif" alt="Customer 3">
+                <h3>Ananya</h3>
+                <p>"A treat for every occasion. Highly recommend!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 eCream. All rights reserved.</p>
+    </footer>
+</body>
+</html>
